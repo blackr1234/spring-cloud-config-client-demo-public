@@ -1,0 +1,22 @@
+
+# bootstrap
+spring:
+  application:
+    name: spring-cloud-config-client-demo
+  profiles:
+    active: dev ## should be externalized
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8889
+  config:
+    import: 'optional:configserver:http://localhost:8889' # Old version: spring.cloud.config.uri: http://localhost:8889
+
+---
+
+# application
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, env, health
