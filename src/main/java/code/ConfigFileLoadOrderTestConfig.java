@@ -22,10 +22,10 @@ import lombok.extern.slf4j.Slf4j;
 @ConfigurationProperties(prefix = "order-test", ignoreUnknownFields = false)
 public class ConfigFileLoadOrderTestConfig {
 
-    @Pattern(regexp = "^application-dev.yaml$") String loadOrder01;
-    @Pattern(regexp = "^spring-cloud-config-client-demo-dev.yaml$") String loadOrder02;
-    @Pattern(regexp = "^application.yaml$") String loadOrder03;
-    @Pattern(regexp = "^spring-cloud-config-client-demo.yaml$") String loadOrder04;
+    @Pattern(regexp = "^application.yaml$") String loadOrder01;
+    @Pattern(regexp = "^spring-cloud-config-client-demo.yaml$") String loadOrder02;
+    @Pattern(regexp = "^application-dev.yaml$") String loadOrder03;
+    @Pattern(regexp = "^spring-cloud-config-client-demo-dev.yaml$") String loadOrder04;
 
 
 
